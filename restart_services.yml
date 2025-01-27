@@ -1,0 +1,14 @@
+---
+- name: Restart all services
+  hosts: all
+  become: true
+  tasks:
+    - name: Restart Web Server
+      service:
+        name: apache2  # Replace with nginx if needed
+        state: restarted
+
+    - name: Restart API Services
+      service:
+        name: api_service  # Replace with actual API service name
+        state: restarted
