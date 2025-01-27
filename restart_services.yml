@@ -5,10 +5,10 @@
   tasks:
     - name: Restart Web Server
       service:
-        name: apache2  # Replace with nginx if needed
+        name: sshd  # Replace 'apache2' with 'sshd' for testing
         state: restarted
 
     - name: Restart API Services
       service:
-        name: api_service  # Replace with actual API service name
+        name: cron  # Replace 'api_service' with 'cron' for testing
         state: restarted
